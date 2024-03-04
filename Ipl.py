@@ -49,16 +49,14 @@ while(no <= 90):
         Table.loc[teamlist[0],"Points"]+=2 
         Table.loc[teamlist[0],"N.R.R"]+=team1nrr 
         Table.loc[teamlist[1],"Lost"]+=1
-        Table.loc[teamlist[1],"Points"]+=2
         Table.loc[teamlist[1],"N.R.R"]+=team2nrr
     elif(teamwon == teamlist[1]):
         Table.loc[teamlist[1],"Won"]+=1 
         Table.loc[teamlist[1],"Points"]+=2 
         Table.loc[teamlist[1],"N.R.R"]+=team2nrr 
         Table.loc[teamlist[0],"Lost"]+=1
-        Table.loc[teamlist[0],"Points"]+=2
         Table.loc[teamlist[0],"N.R.R"]+=team1nrr
         
        #displaying the Table 
-    Table.sort_values('N.R.R')
+    Table.sort_values('Points')
     print(Table)
